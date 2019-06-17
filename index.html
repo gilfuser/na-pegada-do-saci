@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes"
+    />
+    <title>Na Pegada Do Saci</title>
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/addons/p5.dom.min.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="mmenu-light/dist/mmenu-light.css"
+      rel="stylesheet"
+    />
+    <script src="sk/sk1.js"></script>
+    <script src="sk/sk2.js"></script>
+    <script src="sk/sk3.js"></script>
+    <script src="sk/sk4.js"></script>
+    <script src="sk/sk5.js"></script>
+    <script src="sk/sk6.js"></script>
+    <script src="sk/sk7.js"></script>
+    <script src="sk/sk8.js"></script>
+    <script src="sk/sk10.js"></script>
+    <script src="sk/sk11.js"></script>
+    <script src="sk/sk12.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="header">
+        <a class="nav-toggle" href="#menu" aria-hidden="false"></a>
+      </div>
+      <div id="sk"></div>
+      <!-- <div id="my-menu"> -->
+      <nav id="menu"
+      data-mm-title="Na Pegada do Saci"
+      >
+        <!-- class="mm mm--open mm--home" -->
+        <ul>
+          <!-- <ul> -->
+          <li class="Selected"><a href="javascript:p5sk(sk1)">day 1 - 1</a></li>
+          <li><a href="javascript:p5sk(sk2)">day 1 - 2</a></li>
+          <li><a href="javascript:p5sk(sk3)">day 1 - 3</a></li>
+          <li><a href="javascript:p5sk(sk4)">day 1 - 4</a></li>
+          <li><a href="javascript:p5sk(sk5)">day 1 - 5</a></li>
+          <li><a href="javascript:p5sk(sk6)">day 1 - 6</a></li>
+          <li><a href="javascript:p5sk(sk7)">day 2 - 7</a></li>
+          <li><a href="javascript:p5sk(sk8)">day 2 - 8</a></li>
+          <li><a href="javascript:p5sk(sk10)">day 3 - 9</a></li>
+          <li><a href="javascript:p5sk(sk11)">day 4 - 10</a></li>
+          <li><a href="javascript:p5sk(sk12)">day 5 - 11</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Na Pegada do Saci</h1>
+      <br />
+      <h2>Experiments with <a href="https://p5js.org/" target="_blank">P5.js</a>.</h2>
+      <br />
+      <h3><a href="https://github.com/gilfuser/na-pegada-do-saci" target="_blank">This on GitHub</a></h3>
+    </div>
+    <script>
+      function p5sk(s) {
+        const menu = mmlight(document.querySelector("#menu"));
+        menu.close();
+        document.getElementById("sk").innerHTML = "";
+        const myp5 = new p5(s, "sk");
+      }
+    </script>
+    <script src="mmenu-light/dist/mmenu-light.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menu = mmlight(document.querySelector("#menu"));
+        menu.create("(max-width: 3000px)");
+        menu.open();
+        // menu.init("Selected");
+        document
+          .querySelector("a[href='#menu']")
+          .addEventListener("click", evnt => {
+            menu.open();
+            //    Don't forget to "preventDefault" and to "stopPropagation".
+            evnt.preventDefault();
+            evnt.stopPropagation();
+          });
+      });
+    </script>
+  </body>
+</html>
