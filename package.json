@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bulma": "^0.7.5",
     "mmenu-light": "^1.0.7"
   }
 }

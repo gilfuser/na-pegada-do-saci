@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>sketch 5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <style>
+      html {
+        overflow-y: auto;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../../styles/debug.css" /> -->
+  </head>
+  <body>
+    <section
+      class="section hero is-paddingless is-marginless is-fullheight is-fullwidth"
+    >
+      <nav class="navbar is-transparent is-fixed-top hero-head">
+        <div class="navbar-brand">
+          <a
+            role="button"
+            class="navbar-burger"
+            data-target="navMenu"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+            <div
+              class="field buttons is-grouped is-centered has-addons navbar-item"
+            >
+            <a
+              class="button navbar-item has-background-grey-light is-hovered is-selected has-text-grey-darker"
+              href="../../index.html"
+            >
+              Home
+            </a>
+              <a
+                class="button navbar-item is-dark" href="../sk1/index.html"
+              >
+                sketch1
+              </a>
+              <a class="button navbar-item is-dark" href="../sk2/index.html">
+                sketch2
+              </a>
+              <a class="button navbar-item is-dark" href="../sk3/index.html">
+                sketch3
+              </a>
+              <a class="button navbar-item is-dark" href="../sk4/index.html">
+                sketch4
+              </a>
+              <a class="button navbar-item is-dark is-active" href="../sk5/index.html">
+                sketch5
+              </a>
+              <a class="button navbar-item is-dark" href="../sk6/index.html">
+                sketch6
+              </a>
+              <a class="button navbar-item is-dark" href="../sk7/index.html">
+                sketch7
+              </a>
+              <a class="button navbar-item is-dark" href="../sk8/index.html">
+                sketch8
+              </a>
+              <a class="button navbar-item is-dark" href="../sk9/index.html">
+                sketch9
+              </a>
+              <a class="button navbar-item is-dark" href="../sk10/index.html">
+                sketch10
+              </a>
+              <a class="button navbar-item is-dark" href="../sk11/index.html">
+                sketch11
+              </a>
+              <a class="button navbar-item is-dark" href="../sk12/index.html">
+                sketch12
+              </a>
+            </div>
+          <div class="navbar-end">
+          </div>
+        </div>
+      </nav>
+      <div
+        class="hero-body is-marginless is-paddingless is-fullwidth is-fullheight"
+        id="sk"
+      >
+      </div>
+    </section>
+    <script src="../../p5/p5.min.js"></script>
+    <script src="sk5.js"></script>
+
+    <script>
+      function p5sk() {
+        document.getElementById("sk").innerHTML = "";
+        const myp5 = new p5(sk5, "sk");
+      }
+      p5sk();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
