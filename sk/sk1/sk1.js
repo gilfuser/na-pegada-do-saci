@@ -16,5 +16,4 @@ const sk1 = sk => {
     sk.background(255, 0, 200)
   }
 }
-
-// let day1_1 = new p5(sk1, 'p5sketch')
+const myP5 = new p5(sk1, 'sk')

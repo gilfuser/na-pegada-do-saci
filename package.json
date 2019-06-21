@@ -1,6 +1,28 @@
 {
+  "name": "na-pegada-do-saci",
+  "version": "0.0.2",
+  "description": "P5.js Experiments",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilfuser/na-pegada-do-saci"
+  },
+  "keywords": [
+    "P5.js",
+    "Gil Fuser",
+    "interactive",
+    "creative coding",
+    "art",
+    "javascript"
+  ],
+  "author": "Gil Fuser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilfuser/na-pegada-do-saci/issues"
+  },
+  "homepage": "https://gilfuser.github.io/na-pegada-do-saci/",
   "dependencies": {
     "bulma": "^0.7.5",
-    "mmenu-light": "^1.0.7"
+    "mobile-detect": "^1.4.3"
   }
 }

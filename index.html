@@ -1,190 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <html>
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link rel="icon" href="icons/favicon.ico" sizes="any" type="image/x-icon">
-      <!-- <link rel="shortcut icon" href="icons/favicon.ico"> -->
-      <title>Na Pegada Do Saci</title>
-      <!-- <script src="p5/addons/p5.dom.min.js"></script> -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-      />
-      <script src="p5/p5.min.js"></script>
-      <script src="https://kit.fontawesome.com/63ee5d57eb.js"></script>
-      <style>
-        .center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .p5icon {
-          display: block;
-          text-indent: -9999px;
-          width: 45px;
-          height: 45px;
-          background: url(icons/p5-sq-reverse.svg);
-          background-size: 45px 45px;
-        }
-        html {
-          overflow-y: auto;
-        }
-      </style>
-      <!-- <link rel="stylesheet" href="styles/debug.css"> -->
-    </head>
-    <body>
-      <section class="section hero is-marginless is-fullwidth is-fullheight">
-        <nav class="navbar is-transparent is-fixed-top hero-head">
-          <div class="navbar-brand">
-            <a
-              role="button"
-              class="navbar-burger"
-              data-target="navMenu"
-              aria-label="menu"
-              aria-expanded="false"
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="icons/favicon.ico" sizes="any" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="icons/favicon.ico"> -->
+    <title>Na Pegada Do Saci</title>
+    <!-- <script src="p5/addons/p5.dom.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <script src="p5/p5.min.js"></script>
+    <script src="https://kit.fontawesome.com/63ee5d57eb.js"></script>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .p5icon {
+        display: block;
+        text-indent: -9999px;
+        width: 45px;
+        height: 45px;
+        background: url(icons/p5-sq-reverse.svg);
+        background-size: 45px 45px;
+      }
+      html {
+        overflow-y: auto;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+  </head>
+  <body>
+    <section class="section hero is-marginless is-fullwidth is-fullheight">
+      <nav class="navbar is-transparent is-fixed-top hero-head">
+        <div class="navbar-brand">
+          <a
+            role="button"
+            class="navbar-burger"
+            data-target="navMenu"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-start"></div>
+          <div
+            class="field buttons is-grouped is-centered has-addons navbar-item"
+          >
+            <a class="button navbar-item is-selected is-static">
+              Home
+            </a>
+            <a class="button navbar-item is-warning" href="sk/sk1/index.html">
+              sketch1
+            </a>
+            <a class="button navbar-item is-warning" href="sk/sk2/index.html">
+              sketch2
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk3/index.html">
+              sketch3
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk4/index.html">
+              sketch4
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk5/index.html">
+              sketch5
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk6/index.html">
+              sketch6
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk7/index.html">
+              sketch7
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk8/index.html">
+              sketch8
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk9/index.html">
+              sketch9
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk10/index.html">
+              sketch10
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk11/index.html">
+              sketch11
+            </a>
+            <a class="button navbar-item is-warning" href="/sk/sk12/index.html">
+              sketch12
             </a>
           </div>
-          <div id="navMenu" class="navbar-menu">
-            <div class="navbar-start"></div>
-            <div
-              class="field buttons is-grouped is-centered has-addons navbar-item"
-            >
-              <a class="button navbar-item is-selected is-static">
-                Home
-              </a>
-              <a class="button navbar-item is-warning" href="sk/sk1/index.html">
-                sketch1
-              </a>
-              <a class="button navbar-item is-warning" href="sk/sk2/index.html">
-                sketch2
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk3/index.html">
-                sketch3
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk4/index.html">
-                sketch4
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk5/index.html">
-                sketch5
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk6/index.html">
-                sketch6
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk7/index.html">
-                sketch7
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk8/index.html">
-                sketch8
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk9/index.html">
-                sketch9
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk10/index.html">
-                sketch10
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk11/index.html">
-                sketch11
-              </a>
-              <a class="button navbar-item is-warning" href="/sk/sk12/index.html">
-                sketch12
-              </a>
-            </div>
-            <!-- </div> -->
-            <div class="navbar-end"></div>
-          </div>
-        </nav>
-        <div class="container hero-body">
-          <div class="columns is-centered">
-            <div class="column is-half">
-              <div class="card has-background-light">
-                <header class="has-background-dark">
-                  <div class="card-content">
-                    <h2 class="title is-2 has-text-grey-lighter">
-                      Na Pegada do Saci
-                    </h2>
-                  </div>
-                </header>
+          <!-- </div> -->
+          <div class="navbar-end"></div>
+        </div>
+      </nav>
+      <div class="container hero-body">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="card has-background-light">
+              <header class="has-background-dark">
                 <div class="card-content">
-                  <h3 class="subtitle is-3">Experiments with P5.js</h3>
-                  <p class="is-size-5">
-                    Here are simple sketches made most as learning P5. Although
-                    they are simple I thought it would be worth opening them to
-                    the world. Hopefully the list of sketches will grow
-                    endlessly.
-                  </p>
-                  <br />
-                  <p class="is-size-5">
-                    Some of the sketches are interactive and some are not.
-                    There's a tooltip in the links at the navbar indicating
-                    which is interactive and how to interact with it.
-                  </p>
-                  <br />
-                  <p class="is-size-5">
-                    Everyone is invited to make sketches and see them here.
-                    <br />
-                    The way of doing that is by making a pull request on the
-                    repository on
-                    <a
-                      href="https://github.com/gilfuser/na-pegada-do-saci"
-                      target="_blank"
-                      >GitHub</a
-                    >. <br />
-                    Have fun.
-                  </p>
+                  <h2 class="title is-2 has-text-grey-lighter">
+                    Na Pegada do Saci
+                  </h2>
                 </div>
-                <footer class="card-footer">
-                  <div
-                    class="card-footer-item"
-                    style="justify-content: flex-end;"
-                  >
-                    <a aria-label="like">
-                      <span class="icon is-large">
-                        <i
-                          class="fas fa-heart has-text-danger fa-2x"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                    </a>
-                    <a href="https://p5js.org/" class="button p5icon"> </a>
-                  </div>
-                </footer>
+              </header>
+              <div class="card-content">
+                <h3 class="subtitle is-3">Experiments with P5.js</h3>
+                <p class="is-size-5">
+                  Here are simple sketches made most as learning P5. Although
+                  they are simple I thought it would be worth opening them to
+                  the world. Hopefully the list of sketches will grow endlessly.
+                </p>
+                <br />
+                <p class="is-size-5">
+                  Some of the sketches are interactive and some are not. There's
+                  a tooltip in the links at the navbar indicating which is
+                  interactive and how to interact with it.
+                </p>
+                <br />
+                <p class="is-size-5">
+                  Everyone is invited to make sketches and see them here.
+                  <br />
+                  The way of doing that is by making a pull request on the
+                  repository on
+                  <a
+                    href="https://github.com/gilfuser/na-pegada-do-saci"
+                    target="_blank"
+                    >GitHub</a
+                  >. <br />
+                  Have fun.
+                </p>
               </div>
+              <footer class="card-footer">
+                <div
+                  class="card-footer-item"
+                  style="justify-content: flex-end;"
+                >
+                  <a aria-label="like">
+                    <span class="icon is-large">
+                      <i
+                        class="fas fa-heart has-text-danger fa-2x"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </a>
+                  <a href="https://p5js.org/" class="button p5icon"> </a>
+                </div>
+              </footer>
             </div>
           </div>
         </div>
-      </section>
-    </body>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
+      </div>
+    </section>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
 
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-          // Add a click event on each of them
-          $navbarBurgers.forEach(el => {
-            el.addEventListener("click", () => {
-              // Get the target from the "data-target" attribute
-              const target = el.dataset.target;
-              const $target = document.getElementById(target);
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
 
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              el.classList.toggle("is-active");
-              $target.classList.toggle("is-active");
-            });
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
           });
-        }
-      });
-    </script>
-  </html>
+        });
+      }
+    });
+  </script>
 </html>
