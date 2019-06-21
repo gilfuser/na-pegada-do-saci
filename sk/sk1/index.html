@@ -13,7 +13,9 @@
     <title>sketch 1</title>
     <script src="../../p5/p5.min.js"></script>
     <script src="../../p5/addons/p5.dom.min.js"></script>
-    <script src="../../node_modules/mobile-detect/mobile-detect.min.js"></script>
+    <!-- <script src="../../node_modules/mobile-detect/mobile-detect.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
@@ -24,6 +26,20 @@
         overflow-y: auto;
       }
     </style>
+      <script defer>
+        (function() {
+          const md = new MobileDetect(window.navigator.userAgent);
+          const isMob = md.mobile();
+          const head = document.getElementsByTagName("head")[0];
+          const js = document.createElement("script");
+          if (isMob === null) {
+            js.src = "./sk1.js";
+          } else {
+            js.src = "sk1-mob.js";
+          }
+          head.appendChild(js);
+        })();
+      </script>
   </head>
   <body>
     <section
@@ -98,20 +114,6 @@
         class="hero-body is-marginless is-paddingless is-fullwidth is-fullheight"
         id="sk"
       ></div>
-      <script defer>
-        (function() {
-          const md = new MobileDetect(window.navigator.userAgent);
-          const isMob = md.mobile();
-          const head = document.getElementsByTagName("head")[0];
-          const js = document.createElement("script");
-          if (isMob === null) {
-            js.src = "./sk1.js";
-          } else {
-            js.src = "sk1-mob.js";
-          }
-          head.appendChild(js);
-        })();
-      </script>
     </section>
     <!-- <script>
       (function p5sk() {
