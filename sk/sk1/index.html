@@ -107,7 +107,7 @@
         const myp5 = new p5(sk1, "sk");
       })()
     </script> -->
-    <script async>
+    <script defer>
       (function() {
         const md = new MobileDetect(window.navigator.userAgent);
         const isMob = md.mobile();
@@ -115,8 +115,10 @@
         const js = document.createElement("script");
         if (isMob === null) {
           js.src = "./sk1.js";
+          alert("desktop")
         } else {
           js.src = "sk1-mob.js";
+          alert("mobile")
         }
         head.appendChild(js);
       })();
