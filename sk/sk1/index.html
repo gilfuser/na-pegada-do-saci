@@ -12,9 +12,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>sketch 1</title>
     <script src="../../p5/p5.min.js"></script>
-    <script src="../../p5/addons/p5.dom.min.js"></script>
-    <!-- <script src="../../node_modules/mobile-detect/mobile-detect.min.js"></script> -->
-    <!-- <script src="../../scripts/require.js"></script> -->
+    <script src="../ToggleFullScr.js"></script>
+    <!-- <script src="../../p5/addons/p5.dom.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
     <link
       rel="stylesheet"
@@ -115,10 +114,8 @@
         const js = document.createElement("script");
         if (isMob === null) {
           js.src = "./sk1.js";
-          alert("desktop")
         } else {
           js.src = "sk1-mob.js";
-          alert("mobile")
         }
         head.appendChild(js);
       })();
